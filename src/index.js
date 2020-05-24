@@ -1,6 +1,6 @@
 import GAnalytics from 'ganalytics';
 import App from '@components/App';
-import './index.css';
+import './assets/main.css'
 
 window.app = new App({
 	target: document.querySelector('#app'),

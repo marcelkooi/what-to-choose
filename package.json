@@ -1,9 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "build": "pwa export",
+    "build": "npm run build:css && pwa export",
     "start": "sirv build -s",
-    "watch": "pwa watch"
+    "watch": "npm run watch:css && pwa watch",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "dependencies": {
     "ganalytics": "^3.0.0",
@@ -15,8 +17,11 @@
     "@pwa/plugin-gzip": "latest",
     "@pwa/plugin-offline": "latest",
     "@pwa/preset-svelte": "latest",
+    "autoprefixer": "^9.8.0",
     "eslint": "^6.8.0",
-    "svelte": "^3.1.0"
+    "postcss-cli": "^7.1.1",
+    "svelte": "^3.1.0",
+    "tailwindcss": "^1.4.6"
   },
   "browserslist": [
     ">0.25%",
