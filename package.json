@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run build:css && pwa export",
+    "export": "npm run build:css && pwa export",
+    "build:app": "npm run build:css && pwa build",
     "start": "sirv build -s",
     "watch": "npm run watch:css && pwa watch",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
