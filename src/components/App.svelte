@@ -31,6 +31,7 @@
       <div class="my-2">
         <input
           type="text"
+          autofocus
           bind:value={option}
           class="shadow border py-1 px-2 w-64" />
         <button
